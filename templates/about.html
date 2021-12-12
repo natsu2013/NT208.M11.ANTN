@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Giới Thiệu{% endblock %}
+
+{% block css %}{% static '/css/about.css' %}{% endblock %}
+{% block link %} 
+<link rel="icon" type="image/png" href="{% static '/images/icons/logo.ico' %}" />
+{% endblock %}
+
+{% block about %}active{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="tittle">
+        <h1>Giới thiệu</h1>
+    </div>
+
+    <div class="content">
+        <div class="card mb-3" style="max-width: 900px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="https://images.pexels.com/photos/1549004/pexels-photo-1549004.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                        class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title btn btn-danger">Châu Thanh Tuấn</h5>
+                        <p class="card-text">19522463</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+                        <a href="#"> <i class="fab fa-facebook-square"></i> </a>
+                        <a href="#"> <i class="fab fa-twitter"></i> </a>
+                        <a href="#"> <i class="fab fa-linkedin-in"></i> </a>
+                        <a href="#"> <i class="fab fa-github-alt"></i> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-3" style="max-width: 900px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="https://images.pexels.com/photos/532220/pexels-photo-532220.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                        class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title btn btn-success">Nguyễn Văn Tài </h5>
+                        <p class="card-text">19520250</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        <a href="#"> <i class="fab fa-facebook-square"></i> </a>
+                        <a href="#"> <i class="fab fa-twitter"></i> </a>
+                        <a href="#"> <i class="fab fa-linkedin-in"></i> </a>
+                        <a href="#"> <i class="fab fa-github-alt"></i> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-3" style="max-width: 900px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="https://images.pexels.com/photos/848117/pexels-photo-848117.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                        class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title btn btn-warning">Trần Quốc Phong</h5>
+                        <p class="card-text">19522013</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        <a href="#"> <i class="fab fa-facebook-square"></i> </a>
+                        <a href="#"> <i class="fab fa-twitter"></i> </a>
+                        <a href="#"> <i class="fab fa-linkedin-in"></i> </a>
+                        <a href="#"> <i class="fab fa-github-alt"></i> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block event %}
+<script src="{% static '/bootstrap/js/bootstrap.js' %}"></script>
+<script src="{% static '/js/main.js' %}"></script>
+{% endblock %}

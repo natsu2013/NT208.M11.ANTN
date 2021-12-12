@@ -1,0 +1,110 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static '/css/login.css' %}">
+    <link rel="icon" type="image/png" href="{% static '/images/icons/logo.ico' %}" />
+
+</head>
+
+<body>
+    <div class="main">
+
+        <form action="" method="POST" class="form" id="form-1">
+          {% csrf_token %}
+          <h3 class="heading">Đăng ký</h3>
+          <p class="desc">Group's name</p>
+      
+          <div class="spacer"></div>
+
+          <div class="form-group">
+            <label for="username" class="form-label">Tên đăng nhập</label>
+            {{form.username}}
+            <span class="form-message"></span>
+          </div>
+      
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            {{form.email}}
+            <span class="form-message"></span>
+          </div>
+      
+          <div class="form-group">
+            <label for="password" class="form-label">Mật khẩu</label>
+            {{form.password1}}
+            <span class="form-message"></span>
+          </div>
+      
+          <div class="form-group">
+            <label for="password_confirmation" class="form-label">Nhập lại mật khẩu</label>
+            {{form.password2}}
+            <span class="form-message"></span>
+          </div>
+
+          <!-- <div class="form-group">
+            <label for="avatar" class="form-label">Ảnh đại diện</label>
+            <input id="avatar" name="avatar" type="file" class="form-control">
+            <span class="form-message"></span>
+          </div> -->
+          
+          <!-- <div class="form-group">
+            <label for="gender" class="form-label">Giới tính</label>
+            <div>
+              <input name='gender' type='radio' value='male' class='form-control'>
+              Nam
+            </div>
+            <div>
+              <input name='gender' type='radio' value='female' class='form-control'>
+              Nữ
+            </div>
+            <div>
+              <input name='gender' type='radio' value='other' class='form-control'>
+              Khác
+            </div>
+            <span class="form-message"></span>
+          </div> -->
+
+          <button class="form-submit">Đăng ký</button>
+          
+          <div>
+            Đã có tài khoản?
+            <a href="{% url 'login' %}">Đăng nhập</a>
+          </div>
+          <a href="{% url 'home' %}">Trang chủ</a>
+
+        </form>
+        {{form.errors}}
+
+      </div>
+
+    <script src="{% static '/scripts/Validator.js' %}"></script>
+    
+    <script>
+      Validator({
+        form: '#form-1',
+        formGroupSelector: '.form-group',
+        errorSelector: '.form-message',
+        rules: [
+          Validator.isRequired('#id_username', 'Vui lòng nhập tên đăng nhập'),
+          Validator.isRequired('#id_email', 'Vui lòng nhập email'),
+          Validator.isEmail('#id_email'),
+          Validator.isRequired('#id_password1', 'Vui lòng nhập mật khẩu'),
+          Validator.minLength('#id_password1', 8),
+          Validator.isRequired('#id_password2', 'Vui lòng nhập lại mật khẩu'),
+          Validator.isConfirmed('#id_password2', function() {
+            return document.querySelector('#form-1 #id_password1').value
+          }, 'Mật khẩu nhập lại không trùng khớp'),
+          //Validator.isRequired('#avatar', 'Vui lòng chọn ảnh đại diện'),
+          // Validator.isRequired('input[name="gender"]', 'Vui lòng chọn giới tính')
+        ],
+      });
+    </script>
+</body>
+<<<<<<< HEAD
+
+=======
+>>>>>>> latest_newbackend
+</html>

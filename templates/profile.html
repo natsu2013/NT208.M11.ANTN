@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Profile{% endblock %}
+{% block css %}{% static '/css/profile.css' %}{% endblock %}
+{% block content %}
+<div class="wrapper mt-3">
+    <div class="left">
+        <img src="https://images.unsplash.com/photo-1632799442159-42bb99708e37?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80" alt="user" width="100">
+        <h4>{{request.user}}</h4>
+        <div class="social_media">
+            <ul>
+              <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+      </div>
+    </div>
+    <div class="right">
+        <div class="info">
+            <h3>Information</h3>
+            <div class="info_data">
+                 <div class="data">
+                    <h4><i class="far fa-envelope"></i> Email</h4>
+                    <p>{{request.user.email}}</p>
+                 </div>
+                 <div class="data">
+                    <h4> <i class="fas fa-mobile-alt"></i> Phone</h4>
+                    <p>0123456789</p>
+              </div>
+            </div>
+        </div>
+      
+        <div class="projects">
+            <h3>Meal Plan</h3>
+            <div class="projects_data">
+                 <div class="data">
+                    <h4>Recent</h4>
+                    <p> Diet for fat people </p>
+                    <div class="plan-progress">
+                        <div class="progress" style="width: 70%;">
+                            70%
+                        </div>
+                    </div>
+                 </div>
+                 <div class="data">
+                   <h4>Most Viewed</h4>
+                    <p>dolor sit amet.</p>
+              </div>
+            </div>
+        </div>
+
+        <div>
+            <a class="btn btn-info" href="{% url 'logout' %}"> 
+                <i class="fa fa-sign-out" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
