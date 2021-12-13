@@ -4,9 +4,6 @@ import datetime
 
 from polls.models import Blog, Diet
 
-# Test xem có lấy đươc thông tin hay k
-import win32api
-
 # Chức năng đề xuất
 result = {}
 def get_info(request):
@@ -29,9 +26,6 @@ def get_info(request):
 
         # Tính Calo trung bình
         calo = BMR * 1.5
-
-        # Test xem có lấy đươc thông tin hay k
-        # win32api.MessageBox(0, str(calo), 'Calo')
 
         type = 0
         if calo < 800:
@@ -85,13 +79,6 @@ def homeView(request):
 #About
 def about_view(request):
     return render(request, 'about.html')
-
-# #Service
-# def service_view(request):
-#     return render(request, 'service.html')
-#Contact
-# def contact_view(request):
-#     return render(request, 'contact.html')
 
 #Begin menu
 def service_view(request):
