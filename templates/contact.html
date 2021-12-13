@@ -19,19 +19,16 @@
             
             <!-- Modal -->
             {% if messageSent %}
-            <!-- <div class="modal fade" tabindex="11" aria-labelledby="submitLabel" aria-hidden="true"> -->
                 <div>
                 <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                     <h5 class="modal-title" id="submitLabel">ĐÃ GỬI</h5>
-                    <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                     </div>
                     <div class="modal-body">
                         Cảm ơn bạn đã gửi ý kiến về cho chúng tôi. Chúc bạn có một ngày tốt lành !!!
                     </div>
                     <div class="modal-footer">
-                    <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
                     </div>
                 </div>
                 </div>
@@ -45,25 +42,21 @@
                 </span>
 
                 <div class="wrap-input1 validate-input" data-validate="Name is required">
-                    <!-- <input class="input1" type="text" name="name" placeholder="Họ & tên"> -->
                     {{ form.name }}
                     <span class="shadow-input1"></span>
                 </div>
 
                 <div class="wrap-input1 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                    <!-- <input class="input1" type="text" name="email" placeholder="Địa chỉ mail"> -->
                     {{ form.fromEmail }}
                     <span class="shadow-input1"></span>
                 </div>
 
                 <div class="wrap-input1 validate-input" data-validate="Subject is required">
-                    <!-- <input class="input1" type="text" name="subject" placeholder="Tiêu đề"> -->
                     {{ form.subject }}
                     <span class="shadow-input1"></span>
                 </div>
 
                 <div class="wrap-input1 validate-input" data-validate="Message is required">
-                    <!-- <textarea class="input1" name="message" placeholder="Nội dung feedback"></textarea> -->
                     {{ form.message }}
                     <span class="shadow-input1"></span>
                 </div>
