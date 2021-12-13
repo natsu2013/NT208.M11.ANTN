@@ -5,14 +5,6 @@ from django.http import Http404
 from .models import Blog, Comment, Feedback
 from .forms import FeedbackForm, CommentForm
 
-
-
-# Create your views here.
-# def blog(request):
-#     #blog = Blog.objects.all()[:1].get()
-#     blog = Blog.objects.filter(name='tuan').get()
-#     return render(request, 'blog.html', {'blog': blog})
-
 def handleFeedback(request):
     # create a variable to keep track of the form
     messageSent = False
